@@ -89,7 +89,8 @@
 	
 	myApp.config(['NgAdminConfigurationProvider', function (nga) {
 	    // create the admin application
-	    var admin = nga.application('My First Admin').baseApiUrl('/');
+	    //var admin = nga.application('My First Admin').baseApiUrl('/');
+	    var admin = nga.application('Meditarte').baseApiUrl('/');
 	
 	    // add entities
 	    admin.addEntity(nga.entity('customers'));
@@ -98,6 +99,9 @@
 	    admin.addEntity(nga.entity('reviews'));
 	    admin.addEntity(nga.entity('commands'));
 	    admin.addEntity(nga.entity('settings'));
+	    // Agregadas gfilon
+	    admin.addEntity(nga.entity('autor'));
+	    admin.addEntity(nga.entity('obra'));
 	
 	    // configure entities
 	    __webpack_require__(123)(nga, admin);

@@ -27,6 +27,20 @@ myApp.controller('username', ['$scope', '$window', function($scope, $window) { /
     $scope.username =  $window.localStorage.getItem('posters_galore_login');
 }])
 
+// gfilon
+/*myApp.controller('login', ['$scope', '$window', function($scope, $window) { 
+    //$scope.username =  $window.localStorage.getItem('posters_galore_login');
+    $scope.login = function (e) {
+        /*if (e) {
+            e.prevenDefault();
+        }
+        console.log(e);
+        window.localStorage.setItem('posters_galore_login', document.getElementById('username').value);
+        window.location.href = "./index.html";
+        return false;
+    }
+}])*/
+
 // custom states (pages)
 myApp.config(['$stateProvider', require('./segments/segmentsState')]);
 
@@ -42,6 +56,9 @@ myApp.config(['NgAdminConfigurationProvider', function (nga) {
     admin.addEntity(nga.entity('reviews'));
     admin.addEntity(nga.entity('commands'));
     admin.addEntity(nga.entity('settings'));
+    // gfilon
+    admin.addEntity(nga.entity('autor'));
+    admin.addEntity(nga.entity('obra'));
 
     // configure entities
     require('./customers/config')(nga, admin);
